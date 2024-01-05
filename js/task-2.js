@@ -1,11 +1,17 @@
 "use strict"
 
 function calcAverageCalories(days) {
-    let totalDailyCalories = 0;
-    for (let day of days) {
-        totalDailyCalories += day.calories
-    }
-    return totalDailyCalories / days.length;
+  if (days.length === 0) {
+    return 0;
+  }
+
+  let totalDailyCalories = 0;
+  
+  for (let day of days) {
+      totalDailyCalories += day.calories
+  }
+  
+  return totalDailyCalories / days.length;
 }
 
 
